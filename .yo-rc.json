@@ -2,13 +2,8 @@
   "generator-bangular": {
     "version": "0.9.3",
     "filters": {
-      "backend": "mongo",
-      "ngCookies": true,
-      "ngResource": true,
-      "ngSanitize": true,
-      "ngAnimate": true,
-      "sockets": true,
-      "auth": true
+      "backend": "json",
+      "ngAnimate": true
     }
   }
 }
