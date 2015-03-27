@@ -6,19 +6,20 @@ angular.module('gravity')
       restrict: 'E',
       templateUrl: 'directives/side-menu/side-menu.html',
       link: function (scope, element) {
-        scope.ui = {};
-        scope.ui.isOpen = true;
+        scope.navUi = {};
+        scope.navUi.isOpen = true;
 
         angular.element(document).on('click', function(e) {
-          if (angular.element(element).has(e.target).length > 0) {
+          if (scope.$root.rootUi.navBar && angular.element(element).has(e.target).length > 0) {
             return ;
           }
-          scope.ui.isOpen = false;
+          scope.navUi.isOpen = false;
           scope.$apply();
         });
 
+
         angular.element(window).resize(function () {
-          scope.ui.isOpen = angular.element(window).width() > 990;
+          scope.navUi.isOpen = angular.element(window).width() > 990;
           scope.$apply();
         });
 

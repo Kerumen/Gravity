@@ -1,12 +1,14 @@
-<button ng-show="!ui.isOpen" ng-click="ui.isOpen = true" class="btn-menu">
-  <i class="icon-menu"></i>
+<button ng-show="!navUi.isOpen" ng-click="navUi.isOpen = true" class="btn-menu">
+  <i class="ion-navicon-round"></i>
 </button>
 
-<nav ng-show="ui.isOpen" class="side-nav">
-  <img src="assets/images/me.png" alt="me"/>
+<nav ng-show="navUi.isOpen" class="side-nav">
+  <div class="profile-pic">
+    <img src="https://randomuser.me/api/portraits/med/women/74.jpg">
+  </div>
   <ul>
-    <li active-when="/"><a href="/"><span class="icon-home"></span>Home</a></li>
-    <li active-when="/energy"><a href="/energy"><span class="icon-energy"></span> Energy</a></li>
-    <li active-when="/pacman"><a href="/pacman"><span class="icon-pacman"></span> Pacman</a></li>
+    <li active-when="/"><a href="/"><i class="ion-home"></i><span>Home</span></a></li>
+    <li active-when="/profile"><a href="/profile"><i class="ion-person"></i><span>Profile</span></a></li>
+    <li active-when="/missions"><a href="/missions"><i class="ion-planet"></i><span>Missions</span></a></li>
   </ul>
 </nav>

@@ -3,9 +3,9 @@
 angular.module('gravity')
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/home/home.html',
-        controller: 'HomeCtrl',
+      .when('/dashboard', {
+        templateUrl: 'views/dashboard/dashboard.html',
+        controller: 'DashboardCtrl',
         controllerAs: 'vm',
         hideNavBar: true
       });

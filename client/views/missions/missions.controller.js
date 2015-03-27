@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('gravity')
-  .controller('ProfileCtrl', function ($scope) {
+  .controller('MissionsCtrl', function () {
 
     var vm = this;
 
     angular.extend(vm, {
+      name: 'MissionsCtrl'
     });
 
   });
