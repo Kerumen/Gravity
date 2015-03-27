@@ -1,0 +1,29 @@
+#rocketContainer1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.rocket-layer {
+  z-index:3;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform-origin: right center;
+}
+
+.danone {
+  position: relative;
+  margin: 0 auto;
+  #title {
+    position: absolute;
+    top: 600px;
+    left: 180px;
+  }
+  #planet {
+    position:absolute;
+    z-index:2;
+    top: 100px;
+    left: 100px;
+  }
+}
