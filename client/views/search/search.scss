@@ -15,6 +15,8 @@
 .back-stars {
   background-image: url('../../../assets/images/background.svg');
   height: 800px;
+  padding: 0;
+  margin: 0;
 }
 
 #planet-1 {
@@ -22,11 +24,11 @@
 }
 
 #planet-2 {
-  -webkit-transform: translateX(60px) translateY(100px);
+  -webkit-transform: translateY(300px);
 }
 
 #planet-3 {
-  -webkit-transform: translateX(370px) translateY(260px);
+  -webkit-transform: translateX(50px) translateY(570px);
 }
 
 .modal-round {
