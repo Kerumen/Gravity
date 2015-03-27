@@ -1,3 +1,27 @@
-<div>
-  {{ vm.name }}
+<div class="search-container">
+  <div class="row back-stars">
+    <div class="tablet-full">
+      <img id="planet-1" src="assets/images/planet-1.svg" alt=""/>
+    </div>
+    <div class="tablet-full">
+      <img id="planet-2" src="assets/images/planet-2.svg" alt=""/>
+    </div>
+    <div class="tablet-full">
+      <img id="planet-3" src="assets/images/planet-3.svg" alt=""/>
+    </div>
+  </div>
 </div>
+
+<div id="m-planet" class="modal-round" ng-show="vm.planetModal">
+  <div class="planet-desc">
+    <div class="rocket">
+      <img src="assets/fusee-bleu.svg" alt=""/>
+    </div>
+    <h1>{{ vm.currentDesc.name }}</h1>
+    <p class="margin-bot">{{ vm.currentDesc.desc }}</p>
+    <ul class="tags">
+      <li ng-repeat="tag in vm.currentDesc.tags"><div class="tag {{ tag.type }}">{{ tag.name }}</div></li>
+    </ul>
+  </div>
+</div>
+
