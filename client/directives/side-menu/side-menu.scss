@@ -1,0 +1,79 @@
+
+$marge: 12;
+
+.side-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #D1C4E9;
+  width: 350px;
+  padding: 1em;
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0;
+    a {
+      color: #673AB7;
+      text-transform: uppercase;
+      padding: 1em;
+      display: block;
+      text-decoration: none;
+      span {
+        margin-right: 1em;
+      }
+      &:hover {
+        color: #7E57C2;
+      }
+    }
+  }
+  li.active {
+    a {
+      color: #7E57C2;
+    }
+  }
+
+  &.ng-hide-add, &.ng-hide-remove{
+    -webkit-transition:200ms linear all;
+    transition:200ms linear all;
+    transform: translateX(0);
+    transition-delay: 160ms;
+  }
+  &.ng-hide {
+    transform: translateX(-100%);
+  }
+}
+
+.btn-menu {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  font-size: 2.5em;
+  color: #673AB7;
+  outline: none;
+  &:hover {
+    color: darken(#673AB7, 15);
+  }
+  &.ng-hide-add, &.ng-hide-remove{
+    -webkit-transition:200ms linear all;
+    transition:200ms linear all;
+    transform: translateY(0);
+    transition-delay: 260ms;
+  }
+  &.ng-hide {
+    transform: translateY(-200%);
+    transition-delay: 0ms;
+  }
+}
