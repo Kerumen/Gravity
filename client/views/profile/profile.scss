@@ -71,12 +71,6 @@
   text-align: center;
 }
 
-.take-off-button {
-  img {
-    width: 20px
-  }
-}
-
 .tag-custom {
   input {
     border: 0;
@@ -86,5 +80,16 @@
     font-size: 20px;
     margin: .5em;
     line-height: 36px;
+  }
+}
+
+.loading-rocket {
+  position: absolute;
+  top: 500px;
+  left: 800px;
+  width: 115px;
+  height: 250px;
+  img {
+    -webkit-transform: rotate(-150deg);
   }
 }

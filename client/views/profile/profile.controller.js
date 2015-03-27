@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gravity')
-  .controller('ProfileCtrl', function ($scope) {
+  .controller('ProfileCtrl', function ($timeout, $location) {
 
     var vm = this;
 
@@ -74,4 +74,32 @@ angular.module('gravity')
       t
         .to(content, .5, {x: "-=690"});
     };
+
+    vm.takeOff = function () {
+      var profileCard = $('.profile-infos');
+      var tagCard = $('.tag-card');
+      var button = $('.btn-menu');
+      var rocket = $('.rocket-take-off');
+      var takeOffButton = $('.take-off-button');
+      var loadingRocket = $('.loading-rocket');
+      var loadingRocketImg = $('.loading-rocket img');
+
+      TweenMax.to(profileCard, .5, {x: -800, ease: 'Power2.easeOut'});
+      TweenMax.to(tagCard, .5, {x: 800, ease: 'Power2.easeOut'});
+      TweenMax.to(button, .5, {opacity: 0, ease: 'Power2.easeOut'});
+      TweenMax.to(rocket, 3, {y: -300, x: 300, ease: 'Power2.easeOut'});
+      TweenMax.to(takeOffButton, .5, {opacity: 0, ease: 'Power2.easeOut'});
+
+      var t = new TimelineMax({delay: 1});
+      t
+        .to(loadingRocket, 1, {x: -450, y: -200, ease: 'Power0.easeIn'})
+        .to(loadingRocketImg, 0.5, {rotation: "-=30", ease: 'Power0.easeIn'}, "-=.5")
+        .to(loadingRocket, 4, {rotation: -1650, transformOrigin:"50% 50%", ease: 'Power0.easeOut'});
+
+        $timeout(function () {
+          $location.path('/search');
+        }, 6500);
+
+    }
+
   });
