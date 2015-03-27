@@ -1,4 +1,5 @@
-#rocketContainer1 {
+#rocketContainer1,
+#rocketContainer2 {
   position: relative;
   width: 100px;
   height: 100px;
@@ -12,18 +13,22 @@
   transform-origin: right center;
 }
 
+
+
 .danone {
   position: relative;
   margin: 0 auto;
+  padding: 20px;
   #title {
     position: absolute;
     top: 600px;
-    left: 180px;
+    left: 280px;
+    opacity: 0;
   }
   #planet {
-    position:absolute;
+    position: absolute;
     z-index:2;
-    top: 100px;
-    left: 100px;
+    top: 200px;
+    left: 210px;
   }
 }
