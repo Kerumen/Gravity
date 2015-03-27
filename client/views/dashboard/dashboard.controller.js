@@ -6,7 +6,11 @@ angular.module('gravity')
     var vm = this;
 
     angular.extend(vm, {
-      name: 'DashboardCtrl'
+      name: 'DashboardCtrl',
+      showmodal: false,
+      show:function(){
+        vm.showmodal = true
+      }
     });
 
   });

@@ -10,7 +10,7 @@ angular.module('gravity')
         scope.navUi.isOpen = true;
 
         angular.element(document).on('click', function(e) {
-          if (angular.element(element).has(e.target).length > 0) {
+          if (scope.$root.rootUi.navBar && angular.element(element).has(e.target).length > 0) {
             return ;
           }
           scope.navUi.isOpen = false;

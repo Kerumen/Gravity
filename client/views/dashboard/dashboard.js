@@ -6,6 +6,7 @@ angular.module('gravity')
       .when('/dashboard', {
         templateUrl: 'views/dashboard/dashboard.html',
         controller: 'DashboardCtrl',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        hideNavBar: true
       });
   });
