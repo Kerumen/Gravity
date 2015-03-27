@@ -1,23 +1,27 @@
-.btn-default {
+.btn {
   padding: 10px 25px;
   border: 0;
   border-radius: 3px;
-  color: $dark-blue;
   font: inherit;
   font-size: 20px;
   outline: none;
+  display: flex;
+  align-items: center;
+  i {
+    margin-left: .5em;
+  }
+}
+
+.btn-default {
+  @extend .btn;
+  color: $dark-blue;
   background-color: $white;
   box-shadow: 0 2px 0 1px $dark-white, rgba(0, 0, 0, .3) 0 4px 5px;
 }
 
 .btn-success {
-  padding: 10px 25px;
-  border: 0;
-  border-radius: 3px;
+  @extend .btn;
   color: $white;
-  font: inherit;
-  font-size: 20px;
-  outline: none;
   background-color: $light-green;
   box-shadow: 0 2px 0 1px $dark-green, rgba(0, 0, 0, .3) 0 4px 5px;
 }

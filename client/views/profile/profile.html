@@ -1,11 +1,11 @@
-<div class="row">
+<div class="row" id="profile-view">
   <div class="all-full margin-bot-2">
     <div class="card profile-infos margin-top-6">
       <div class="profile-pic">
         <img src="https://randomuser.me/api/portraits/med/women/74.jpg">
       </div>
       <div class="margin-left">
-        <h2>Anne P</h2>
+        <h2>Roberta P.</h2>
         <p>Commerciale <i class="ion-network margin-left"></i></p>
         <p>Français, English<i class="ion-earth margin-left"></i></p>
       </div>
@@ -14,21 +14,34 @@
   <div class="all-full  margin-bot-2">
     <div class="card">
       <h2>What are you interested in ?</h2>
-      <p>Pick a tag!</p>
+      <p>Fill your tags!</p>
         <ul class="tag-container">
-          <li ng-repeat="tag in vm.myTags track by tag.name">
+          <li ng-repeat="tag in vm.myTags track by tag.name" class="push-item">
             <div ng-click="vm.removeTag($index)" class="tag {{tag.type}}">{{tag.name}} <i class="ion-close"></i></div>
           </li>
+          <li class="tag-custom">
+            <form ng-submit="vm.addTag()">
+              <input type="text" ng-model="vm.customTag" placeholder="Add a custom tag"/>
+            </form>
+          </li>
         </ul>
-      <ul class="tag-pool">
-        <li ng-repeat="tag in vm.tags track by tag.name">
-          <div ng-click="vm.addTag(tag)" class="tag {{tag.type}}">{{tag.name}}</div>
-        </li>
-      </ul>
+      <hr>
+      <p>{{ vm.tagsTitle[vm.indexTagsTitle] }}</p>
+      <div class="tag-wrapper">
+        <div class="tag-arrows" ng-click="vm.scrollTagsLeft()"><i class="ion-chevron-left"></i></div>
+        <div class="tag-pool-wrapper">
+          <ul class="tag-pool">
+            <li ng-repeat="tag in vm.tags track by tag.name">
+              <div ng-click="vm.addTag(tag)" class="tag {{tag.type}}">{{tag.name}}</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tag-arrows" ng-click="vm.scrollTagsRight()"><i class="ion-chevron-right"></i></div>
+      </div>
     </div>
   </div>
   <div class="all-full">
-    <a class="btn-success f-right" href="/search"> Ready to take off ?</a>
+    <a class="btn-success f-right" href="/"> Ready to take off? <i class="icon-rocket"></i></a>
     <div class="f-clear"></div>
   </div>
 </div>

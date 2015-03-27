@@ -2,6 +2,7 @@
 $marge: 12;
 
 .side-nav {
+  z-index: 9999;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -72,6 +73,7 @@ $marge: 12;
   font-size: 2.5em;
   color: $white;
   outline: none;
+  z-index: 9999;
   &:hover {
     color: darken($white, 15);
   }

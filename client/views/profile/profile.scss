@@ -18,9 +18,20 @@
   min-height: 100px;
 }
 
+.tag-pool-wrapper {
+  position: relative;
+  width: 80%;
+  height: 115px;
+  overflow: hidden;
+}
+
 .tag-pool {
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 580px * 3;
 }
 
 .tag {
@@ -46,5 +57,34 @@
   &.tag-blue {
     background-color: $cyan;
     box-shadow: darken($cyan, 5) 0 2px 0 0;
+  }
+}
+
+.tag-wrapper {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.tag-arrows {
+  width: 10%;
+  text-align: center;
+}
+
+.take-off-button {
+  img {
+    width: 20px
+  }
+}
+
+.tag-custom {
+  input {
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    font: inherit;
+    font-size: 20px;
+    margin: .5em;
+    line-height: 36px;
   }
 }
