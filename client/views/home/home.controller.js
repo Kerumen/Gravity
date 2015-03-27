@@ -103,7 +103,7 @@ angular.module('gravity')
     var t3 = new TimelineMax({delay: 5});
       t3
         .to(danone, 1, {y: -150, ease: 'Power2.easeOut'})
-        .to(title, 1, {y: 300, ease: 'Power2.easeOut'}, "-=1")
+        .to(title, 1, {y: 250, ease: 'Power2.easeOut'}, "-=1")
         .to(forms, 0.2, {opacity: 1, ease: 'Power2.easeOut'});
 
     var login = $('input[id="login"]');

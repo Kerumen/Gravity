@@ -7,7 +7,7 @@ angular.module('gravity')
       templateUrl: 'directives/side-menu/side-menu.html',
       link: function (scope, element) {
         scope.navUi = {};
-        scope.navUi.isOpen = true;
+        scope.navUi.isOpen = false;
 
         angular.element(document).on('click', function(e) {
           if (scope.$root.rootUi.navBar && angular.element(element).has(e.target).length > 0) {
