@@ -13,22 +13,49 @@
   transform-origin: right center;
 }
 
+.wrapper {
+  position: relative;
+}
 
+#title {
+  position: absolute;
+  top: 600px;
+  left: 280px;
+  opacity: 0;
+  -webkit-transition: ease opacity 1s;
+  .by-danone {
+    -webkit-transition: ease opacity .5s;
+    opacity: 0;
+    text-align: right;
+    b {
+      font-weight: bold;
+    }
+  }
+}
 
 .danone {
   position: relative;
   margin: 0 auto;
-  padding: 20px;
-  #title {
-    position: absolute;
-    top: 600px;
-    left: 280px;
-    opacity: 0;
-  }
   #planet {
     position: absolute;
     z-index:2;
     top: 200px;
     left: 210px;
+  }
+}
+
+.login-forms {
+  width: 350px;
+  position: absolute;
+  top: 530px;
+  left: 220px;
+  opacity: 0;
+  input {
+    margin-bottom: 30px;
+  }
+  button {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
   }
 }

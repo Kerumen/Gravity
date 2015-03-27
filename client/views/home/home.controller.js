@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gravity')
-  .controller('HomeCtrl', function ($timeout) {
+  .controller('HomeCtrl', function ($timeout, $location) {
 
     var vm = this;
 
@@ -80,7 +80,7 @@ angular.module('gravity')
       path.getBoundingClientRect();
       // Define our transition
       path.style.transition = path.style.WebkitTransition =
-        'stroke-dashoffset 1.5s ease-in-out';
+        'stroke-dashoffset 1s ease-in-out';
       // Go!
       path.style.strokeDashoffset = '0';
     }
@@ -88,11 +88,36 @@ angular.module('gravity')
     $timeout(function () {
       var $title = $("#title");
       $title.css('opacity', 1);
-      $title.contents().find("path").each(function() {
+      $title.find("object").contents().find("path").each(function() {
         simulatePathDrawing(this);
       });
+      $timeout(function () {
+        $title.find(".by-danone").css('opacity', 1);
+      }, 1000)
     }, 1000);
 
 
+    var danone = $(".danone");
+    var title = $("#title");
+    var forms = $(".login-forms");
+    var t3 = new TimelineMax({delay: 5});
+      t3
+        .to(danone, 1, {y: -150, ease: 'Power2.easeOut'})
+        .to(title, 1, {y: 300, ease: 'Power2.easeOut'}, "-=1")
+        .to(forms, 0.2, {opacity: 1, ease: 'Power2.easeOut'});
+
+    var login = $('input[id="login"]');
+    var mdp = $('input[id="mdp"]');
+    var button = $('#button-login');
+    vm.login = function () {
+      TweenMax.to(danone, .5, {y: -700, ease: 'Power2.easeOut'});
+      TweenMax.to(title, .5, {y: 500, ease: 'Power2.easeOut'});
+      TweenMax.to(login, .5, {x: 600, ease: 'Power2.easeOut'});
+      TweenMax.to(mdp, .5, {x: -600, ease: 'Power2.easeOut'});
+      TweenMax.to(button, .5, {opacity: 0, ease: 'Power2.easeOut'});
+      $timeout(function () {
+        $location.path('/profile');
+      }, 1000);
+    }
 
   });
