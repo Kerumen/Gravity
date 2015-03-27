@@ -8,7 +8,7 @@ $marge: 12;
   left: 0;
   background-color: $white;
   width: 350px;
-  //padding: 1em;
+  padding-top: 1em;
   img {
     display: block;
     margin: 0 auto;
@@ -52,7 +52,7 @@ $marge: 12;
     -webkit-transition:150ms linear all;
     transition:150ms linear all;
     transform: translateX(0);
-    transition-delay: 160ms;
+    transition-delay: 150ms;
   }
   &.ng-hide {
     transition-delay: 0;
