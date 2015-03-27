@@ -1,4 +1,5 @@
 @import "colors";
+@import "utils";
 
 
 // font
@@ -52,10 +53,26 @@ h1 {
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 3px;
-  box-shadow: 0 2px 0 1px rgba(255, 255, 255, 0.2);// rgba(0,0,0,.3) 0 4px 5px
+  box-shadow: 0 2px 0 1px rgba(255, 255, 255, 0.2); // rgba(0,0,0,.3) 0 4px 5px
   font: inherit;
   font-size: 25px;
   &::-webkit-input-placeholder {
     color: $light-cyan;
+  }
+}
+
+.card {
+  background-color: $white;
+  color: $dark-blue;
+  border-radius: 3px;
+  box-shadow: darken($white, 8) 0 3px 0 0 inset, darken($dark-blue, 8) 0 3px 0 0;
+  padding: 1em;
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 2em;
+  }
+  p {
+    font-weight: 400;
   }
 }

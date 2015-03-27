@@ -1,3 +1,50 @@
 /**
  * profile.scss
  */
+
+.profile-infos {
+  display: flex;
+  align-items: center;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(black, .1);
+  border-radius: 3px;
+  padding: 1em;
+  width: 100%;
+  margin: 1em 0 1em 0;
+  min-height: 100px;
+}
+
+.tag-pool {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: .2em;
+  margin: .5em;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 200;
+  width: 120px;
+  color: $white;
+  border-radius: 3px;
+  i {
+    margin-left: .5em;
+  }
+  &.tag-red {
+    background-color: lighten($dark-red, 5);
+    box-shadow: darken($red, 15) 0 2px 0 0;
+  }
+  &.tag-green {
+    background-color: $light-green;
+    box-shadow: darken($light-green, 5) 0 2px 0 0;
+  }
+  &.tag-blue {
+    background-color: $cyan;
+    box-shadow: darken($cyan, 5) 0 2px 0 0;
+  }
+}

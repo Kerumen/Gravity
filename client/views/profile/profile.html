@@ -1,1 +1,30 @@
-
+<div class="row">
+  <div class="all-full margin-bot-2">
+    <div class="card profile-infos margin-top-6">
+      <div class="profile-pic">
+        <img src="https://randomuser.me/api/portraits/med/women/74.jpg">
+      </div>
+      <div class="margin-left">
+        <h2>Anne P</h2>
+        <p>Commerciale <i class="ion-network margin-left"></i></p>
+        <p>Français, English<i class="ion-earth margin-left"></i></p>
+      </div>
+    </div>
+  </div>
+  <div class="all-full">
+    <div class="card">
+      <h2>What are you interested in ?</h2>
+      <p>Pick a tag!</p>
+        <ul class="tag-container">
+          <li ng-repeat="tag in vm.myTags track by tag.name">
+            <div ng-click="vm.removeTag($index)" class="tag {{tag.type}}">{{tag.name}} <i class="ion-close"></i></div>
+          </li>
+        </ul>
+      <ul class="tag-pool">
+        <li ng-repeat="tag in vm.tags track by tag.name">
+          <div ng-click="vm.addTag(tag)" class="tag {{tag.type}}">{{tag.name}}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
