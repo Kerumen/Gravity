@@ -6,9 +6,9 @@ $marge: 12;
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: #D1C4E9;
+  background-color: $white;
   width: 350px;
-  padding: 1em;
+  //padding: 1em;
   img {
     display: block;
     margin: 0 auto;
@@ -22,32 +22,40 @@ $marge: 12;
   li {
     margin: 0;
     a {
-      color: #673AB7;
+      color: $dark-blue;
       text-transform: uppercase;
       padding: 1em;
-      display: block;
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      span {
+      font-weight: 400;
+      i {
         margin-right: 1em;
+        font-size: 35px;
+        display: block;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
       }
       &:hover {
-        color: #7E57C2;
+        color: $blue;
       }
     }
-  }
-  li.active {
-    a {
-      color: #7E57C2;
+    &.active {
+      background-color: darken($white, 8);
+      box-shadow: darken($white, 12) 0 2px 0 0 inset, darken($white, 12) 0 -2px 0 0 inset;
     }
   }
 
   &.ng-hide-add, &.ng-hide-remove{
-    -webkit-transition:200ms linear all;
-    transition:200ms linear all;
+    -webkit-transition:150ms linear all;
+    transition:150ms linear all;
     transform: translateX(0);
     transition-delay: 160ms;
   }
   &.ng-hide {
+    transition-delay: 0;
     transform: translateX(-100%);
   }
 }
@@ -61,10 +69,10 @@ $marge: 12;
   font: inherit;
   background-color: transparent;
   font-size: 2.5em;
-  color: #673AB7;
+  color: $white;
   outline: none;
   &:hover {
-    color: darken(#673AB7, 15);
+    color: darken($white, 15);
   }
   &.ng-hide-add, &.ng-hide-remove{
     -webkit-transition:200ms linear all;
@@ -75,5 +83,13 @@ $marge: 12;
   &.ng-hide {
     transform: translateY(-200%);
     transition-delay: 0ms;
+  }
+}
+
+.profile-pic {
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
   }
 }

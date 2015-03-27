@@ -6,6 +6,7 @@ angular.module('gravity')
       .when('/', {
         templateUrl: 'views/home/home.html',
         controller: 'HomeCtrl',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        hideNavBar: true
       });
   });

@@ -5,7 +5,7 @@ angular.module('gravity')
     return {
       restrict: 'EA',
       link: function (scope, element, attrs) {
-        $rootScope.$on('$routeChangeSuccess', function(){
+        $rootScope.$on('$routeChangeSuccess', function () {
           if ($location.path() == attrs.activeWhen) {
             element.addClass('active');
           } else {
