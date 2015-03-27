@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sideMenu')
+angular.module('gravity')
   .directive('sideMenu', function () {
     return {
       restrict: 'E',

@@ -1,3 +1,4 @@
+@import "../views/profile/profile";
 @import "colors";
 
 
@@ -6,12 +7,23 @@
 @import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700);
 
 
+// imports
+@import "../directives/side-menu/side-menu";
+
+// variables
+$fontsize: 21px;
+
 body {
   font-family: 'Raleway', sans-serif;
+  background-color: $dark-blue;
+  line-height: 1.5em;
+  font-size: $fontsize;
+  color: $white;
+  font-weight: 100;
 }
 
 h1 {
   font-family: 'Amatic SC', cursive;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 1.5em;
 }
