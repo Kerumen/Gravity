@@ -44,14 +44,20 @@
   }
 }
 
+.login-or {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
 .login-forms {
   width: 350px;
   position: absolute;
-  top: 510px;
+  top: 480px;
   left: 220px;
   opacity: 0;
   input {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   button {
     margin: 0 auto;

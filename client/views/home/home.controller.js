@@ -109,12 +109,16 @@ angular.module('gravity')
     var login = $('input[id="login"]');
     var mdp = $('input[id="mdp"]');
     var button = $('#button-login');
+    var or = $('.login-or');
+    var linkedIn = $('#linkedin-login');
     vm.login = function () {
       TweenMax.to(danone, .5, {y: -700, ease: 'Power2.easeOut'});
       TweenMax.to(title, .5, {y: 500, ease: 'Power2.easeOut'});
       TweenMax.to(login, .5, {x: 600, ease: 'Power2.easeOut'});
       TweenMax.to(mdp, .5, {x: -600, ease: 'Power2.easeOut'});
-      TweenMax.to(button, .5, {opacity: 0, ease: 'Power2.easeOut'});
+      TweenMax.to(button, .5, {x: 600, ease: 'Power2.easeOut'});
+      TweenMax.to(or, .5, {opacity: 0, ease: 'Power2.easeOut'});
+      TweenMax.to(linkedIn, .5, {x: -600, ease: 'Power2.easeOut'});
       $timeout(function () {
         $location.path('/profile');
       }, 1000);

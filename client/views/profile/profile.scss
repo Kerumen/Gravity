@@ -84,12 +84,11 @@
 }
 
 .loading-rocket {
-  position: absolute;
-  top: 500px;
-  left: 800px;
+  display: inline-block;
   width: 115px;
   height: 250px;
+  opacity: 0;
   img {
-    -webkit-transform: rotate(-150deg);
+//    -webkit-transform: rotate(-150deg);
   }
 }
