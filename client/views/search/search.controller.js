@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gravity')
-  .controller('SearchCtrl', function ($scope) {
+  .controller('SearchCtrl', function ($scope, $timeout, $location) {
 
     var vm = this;
 
@@ -93,4 +93,12 @@ angular.module('gravity')
     $('#p-planet-2').circleType({radius:164, dir: -1});
     $('#p-planet-3').circleType({radius:184, dir: -1});
 
+    vm.seeMore = function () {
+      TweenMax.to($mPlanet, 0.5, {x: -1000});
+
+      $timeout(function () {
+        $location.path('/project');
+      }, 500);
+
+    };
   });

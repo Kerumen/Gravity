@@ -25,10 +25,14 @@
       <a href="/project"><img src="assets/fusee-bleu.svg" alt=""/></a>
     </div>
     <h1>{{ vm.currentDesc.name }}</h1>
-    <p class="margin-bot">{{ vm.currentDesc.desc }}</p>
+    <div class="mission-flex">
+      <p class="margin-bot">{{ vm.currentDesc.desc }}</p>
+      <i class="ion-ios-arrow-right" ng-click="vm.seeMore()"></i>
+    </div>
     <ul class="tags">
       <li ng-repeat="tag in vm.currentDesc.tags"><div class="tag {{ tag.type }}">{{ tag.name }}</div></li>
     </ul>
   </div>
+  <div class="project-detail-bg"></div>
 </div>
 

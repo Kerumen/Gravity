@@ -61,15 +61,13 @@
 
 .modal-round {
   width: 800px;
-  overflow: hidden;
   position: fixed;
   top: 0;
   bottom: 0;
-  right: -25%;
-  padding: 10px 10px 0;
+  right: -27%;
   .planet-desc {
     width: 1100px;
-    height: 1020px;
+    height: 1030px;
     border-radius: 100%;
     background-color: $white;
     box-shadow: $dark-white -2px -4px 0 0;
@@ -94,5 +92,24 @@
         -webkit-transform: translateX(60px) translateY(-30px);
       }
     }
+  }
+  .project-detail-bg {
+    height: 1042px;
+    width: 1000px;
+    background-color: $white;
+    top: 0;
+    left: 610px;
+    position: absolute;
+    z-index: 99999;
+  }
+}
+
+.mission-flex {
+  display: flex;
+  align-items: center;
+  i {
+    text-align: center;
+    font-size: 80px;
+    width: 200px;
   }
 }
