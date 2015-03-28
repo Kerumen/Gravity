@@ -49,6 +49,9 @@
 .align-center {
   align-content: center;
 }
+.text-center {
+  text-align: center;
+}
 .stat_title {
   font-weight: bold;
   font-size: 28px;
@@ -71,4 +74,23 @@
 
 .card_radar {
   padding-bottom: 65px!important;
+}
+.all_right {
+  float:right;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+.pop_up {
+  background-color: #243A66;
+  color: #E3DED2;
+  border-radius: 3px;
+  box-shadow: #d3ccb9 0 3px 0 0 inset, #192948 0 3px 0 0;
+  width: 60%;
+  margin: 0 auto;
+}
+.dash_icone {
+  font-size: 45px;
+}
+.dash_bold {
+  font-weight: bold;
 }

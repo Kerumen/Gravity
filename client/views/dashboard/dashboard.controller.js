@@ -53,6 +53,16 @@ angular.module('gravity')
         {name:'project8', nb:12},
         {name:'project9', nb:1},
         {name:'project10', nb:32}
+      ],
+      projects: [
+        {name:'project3', description:"description project3", job:"commercial", date:"06/03/15"},
+        {name:'project1', description:"description project1", job:"commercial", date:"18/02/15"},
+        {name:'project2', description:"description project2", job:"commercial", date:"26/01/15"}
+      ],
+      recoms: [
+        {name:'danoners1', comment:"comment1", job:"commercial", date:"06/03/15"},
+        {name:'danoners2', comment:"comment2", job:"commercial", date:"18/02/15"},
+        {name:'danoners3', comment:"comment2", job:"commercial", date:"26/01/15"}
       ]
     });
 
