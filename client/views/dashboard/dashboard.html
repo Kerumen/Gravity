@@ -1,13 +1,73 @@
 <modal yolo="vm.showmodal">
-  <div style="background: #ffffff; width: 500px; margin: 0 auto">
-
-    <div class="close ion-close-round" ng-click="vm.showmodal = false"></div>
-    <div class="desktop-12">Coucou</div>
-    <div class="desktop-12">Coucou</div>
-    <div class="desktop-12">Coucou</div>
-    <div class="desktop-12">Coucou</div>
-    <div class="desktop-12">Coucou</div>
-
+  <div class="pop_up">
+    <div class="row">
+      <div class="card profile-infos desktop-12 dash_marg_bot">
+        <div class="profile-pic">
+          <img src="https://randomuser.me/api/portraits/med/women/74.jpg">
+        </div>
+        <div class="margin-left">
+          <h2>Roberta P.</h2>
+          <p>Commerciale <i class="ion-network margin-left"></i></p>
+          <p>Français, English<i class="ion-earth margin-left"></i></p>
+        </div>
+      </div>
+      <div class="desktop-6 dash_marg_bot">
+        <div class="desktop-12 text-center">
+          <i class="icon ion-ios-star dash_icone"></i>
+        </div>
+        <div class=" desktop-12 dash_stitle">Projects realised</div>
+          <div class="desktop-11">
+            <ul class="desktop-12">
+              <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="project in vm.projects | orderBy:order | limitTo : 8">
+                <div class="desktop-12">
+                  <span class="project_name dash_bold">{{project.name}}</span>
+                </div>
+                <div class="desktop-12">
+                  <span class="project_des">{{project.description}}</span>
+                </div>
+                <div class="desktop-12">
+                  <span class="project_date">{{project.date}}</span>
+                </div>
+                <div class="desktop-12">
+                  <span class="project_job"><span class="dash_bold">Job concerned</span> : {{project.job}}</span>
+                </div>
+              </li>
+            </ul>
+            <div class="desktop-12">
+              <div class="desktop-6 centered">
+                <button class="btn-default">linkedin profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="desktop-6 dash_marg_bot">
+          <div class="desktop-12 text-center">
+            <i class="icon ion-earth dash_icone"></i>
+          </div>
+          <div class=" desktop-12 dash_stitle">Recommendation</div>
+          <div class="desktop-11">
+            <ul class="desktop-12">
+              <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="recom in vm.recoms | orderBy:order | limitTo : 8">
+                <div class="desktop-12">
+                  <span class="project_name"><span class="dash_bold">Name of danoners</span> : {{recom.name}}</span>
+                </div>
+                <div class="desktop-12">
+                  <span class="project_job"><span class="dash_bold">Job of the dannoners</span> : {{recom.job}}</span>
+                </div>
+                <div class="desktop-12">
+                  <span class="project_des"><span class="dash_bold">comments</span> : {{recom.comment}}</span>
+                </div>
+              </li>
+            </ul>
+            <div class="desktop-12">
+              <div class="desktop-6 centered">
+                <button class="btn-default">Copy of Email</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </modal>
 
@@ -34,7 +94,7 @@
         </div>
         <div class="desktop-4">
           <span class="extern_country desktop-12">{{extern.country}}</span>
-          <span class="extern_up desktop-12" ng-if="extern.up"><span ng-if="extern.up >= 1"><i class="icon ion-earth"></i><span ng-if="extern.up >= 2"><i class="icon ion-earth up_icon"></i></span><span ng-if="extern.up >= 3"><i class="icon ion-earth up_icon"></i></span><span ng-if="extern.up >= 4"><i class="icon ion-earth up_icon"></i></span></span>
+          <span class="extern_up desktop-12" ng-if="extern.up"><span ng-if="extern.up >= 1"><i class="icon ion-ios-star"></i><span ng-if="extern.up >= 2"><i class="icon ion-ios-star up_icon"></i></span><span ng-if="extern.up >= 3"><i class="icon ion-ios-star up_icon"></i></span><span ng-if="extern.up >= 4"><i class="icon ion-ios-star up_icon"></i></span></span>
         </div>
       </li>
     </ul>
