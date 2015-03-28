@@ -1,12 +1,105 @@
 <modal yolo="vm.showmodal">
-  <div class="close ion-close-round" ng-click="vm.showmodal = false"></div>
-  <div class="mobile-3 tablet-6 desktop-12">Coucou</div>
-  <div class="mobile-3 tablet-6 desktop-12">Coucou</div>
-  <div class="mobile-3 tablet-6 desktop-12">Coucou</div>
-  <div class="mobile-3 tablet-6 desktop-12">Coucou</div>
-  <div class="mobile-3 tablet-6 desktop-12">Coucou</div>
+  <div style="background: #ffffff; width: 500px; margin: 0 auto">
+
+    <div class="close ion-close-round" ng-click="vm.showmodal = false"></div>
+    <div class="desktop-12">Coucou</div>
+    <div class="desktop-12">Coucou</div>
+    <div class="desktop-12">Coucou</div>
+    <div class="desktop-12">Coucou</div>
+    <div class="desktop-12">Coucou</div>
+
+  </div>
 </modal>
+
 <div class="row">
-  <div class="dash_title mobile-3 tablet-6 desktop-12">Gravity Dashboard</div>
-  <button ng-click="vm.show()">blabla</button>
+  <div class="dash_title desktop-12">Gravity Dashboard</div>
+  <div class="border_right desktop-3">
+    <div class="dash_stitle desktop-12">Talents</div>
+    <div class="dash_search desktop-12">
+      <span class="name_filter desktop-3">filter: </span>
+      <form class="desktop-4">
+        <input type="text" name="search" ng-model="vm.externfilter" />
+      </form>
+    </div>
+    <ul class="desktop-11">
+      <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="extern in vm.externs | orderBy:order | limitTo : 8 | filter:vm.externfilter" ng-click="vm.show()">
+        <div class="desktop-8">
+          <div class="desktop-12">
+            <span class="extern_fname">{{extern.fname}}</span>
+            <span class="extern_name">{{extern.name}}</span>
+          </div>
+          <div class="desktop-12">
+            <span class="extern_job">{{extern.job}}</span>
+          </div>
+        </div>
+        <div class="desktop-4">
+          <span class="extern_country desktop-12">{{extern.country}}</span>
+          <span class="extern_up desktop-12" ng-if="extern.up"><span ng-if="extern.up >= 1"><i class="icon ion-earth"></i><span ng-if="extern.up >= 2"><i class="icon ion-earth up_icon"></i></span><span ng-if="extern.up >= 3"><i class="icon ion-earth up_icon"></i></span><span ng-if="extern.up >= 4"><i class="icon ion-earth up_icon"></i></span></span>
+        </div>
+      </li>
+    </ul>
+    <div class="desktop-12">
+      <div class="desktop-6 centered">
+        <button class="btn-default">Export to excel</button>
+      </div>
+    </div>
+  </div>
+  <div class="border_right desktop-3">
+    <div class="dash_stitle desktop-12">Danoners</div>
+    <div class="dash_search desktop-12">
+      <span class="name_filter desktop-3">filter: </span>
+      <form class="desktop-4">
+        <input type="text" name="search" ng-model="vm.internfilter" />
+      </form>
+    </div>
+    <ul class="desktop-11">
+      <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="intern in vm.interns | orderBy:order | limitTo : 8 | filter:vm.internfilter">
+        <div class="desktop-8">
+          <div class="desktop-12">
+            <span class="extern_fname">{{intern.fname}}</span>
+            <span class="extern_name">{{intern.name}}</span>
+          </div>
+          <div class="desktop-12">
+            <span class="extern_job">{{intern.job}}</span>
+          </div>
+        </div>
+        <div class="desktop-4">
+          <span class="extern_country desktop-12">{{intern.country}}</span>
+          <span class="extern_up desktop-12">{{intern.offer}} offers</span>
+        </div>
+      </li>
+    </ul>
+    <div class="desktop-12">
+      <div class="desktop-6 centered">
+        <button class="btn-default">Export to excel</button>
+      </div>
+    </div>
+  </div>
+  <div class="desktop-6">
+    <div class="dash_stitle desktop-12">Stat projets</div>
+    <div class="desktop-12">
+      <div class="card desktop-6">
+        <div class="stat_title desktop-12 centered">demands/offers</div>
+        <div class="desktop-12">
+          <canvas id="doughnut" class="chart chart-doughnut dash_chart" data="vm.data" labels="vm.labels" legend="true"></canvas>
+        </div>
+      </div>
+      <div class="card desktop-6 card_radar">
+        <div class="stat_title desktop-12 centered">most used tags</div>
+        <div class="desktop-12">
+          <canvas id="radar" class="chart chart-radar dash_chart" data="vm.data2" labels="vm.labels2"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="stat_title desktop-12 dash_marg_top">top projects</div>
+    <ul class="desktop-11">
+      <li class="extern_list top_card top_marg_bot desktop-12" ng-repeat="topproject in vm.topprojects | orderBy:'-nb' | limitTo : 9">
+        <div class="desktop-12">
+          <span class="extern_fname">Project name : {{topproject.name}}</span>
+          <span class="extern_name">realised {{topproject.nb}} times</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
 </div>

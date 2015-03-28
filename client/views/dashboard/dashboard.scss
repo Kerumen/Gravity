@@ -2,8 +2,73 @@
  * dashboard.scss
  */
 .dash_title {
+   text-align: center;
+   font-size:45px;
+   font-weight: bold;
+   margin-top:3%;
+   margin-bottom: 65px;
+}
+.dash_stitle {
   text-align: center;
-  font-size:45px;
+  font-size:40px;
   font-weight: bold;
-  margin-top:5%;
+  padding-bottom: 35px;
+}
+.border_right {
+  border-right: 4px solid #E3DED2;
+}
+.dash_marg_bot {
+  margin-bottom: 1em;
+}
+.dash_marg_top {
+  margin-top: 1em;
+}
+.dash_card {
+  background-color: #E3DED2;
+  color: #243A66;
+  border-radius: 3px;
+  box-shadow: #d3ccb9 0 3px 0 0 inset, #192948 0 3px 0 0;
+  padding: 0.5em 1.5em 1.5em 1.5em;
+}
+.up_icon {
+  margin-left: 3px;
+}
+.extern_fname {
+  font-weight: bold;
+}
+.extern_name {
+  font-weight: bold;
+}
+.dash_search {
+  padding-bottom: 35px;
+}
+.name_filter {
+  font-weight: bold;
+  font-size: 26px;
+}
+.align-center {
+  align-content: center;
+}
+.stat_title {
+  font-weight: bold;
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+.top_marg_bot {
+  margin-bottom: 0.5em;
+}
+.top_card {
+  background-color: #E3DED2;
+  color: #243A66;
+  border-radius: 3px;
+  box-shadow: #d3ccb9 0 3px 0 0 inset, #192948 0 3px 0 0;
+  padding: 0.5em 1em 1em 1em;
+}
+.dash_chart {
+  width: 342px;
+  height: 171px;
+}
+
+.card_radar {
+  padding-bottom: 65px!important;
 }

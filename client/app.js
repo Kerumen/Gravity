@@ -2,7 +2,8 @@
 
 angular.module('gravity', [
   'ngRoute',
-  'ngAnimate'
+  'ngAnimate',
+  'chart.js'
 ])
   .config(function ($routeProvider, $locationProvider) {
 
