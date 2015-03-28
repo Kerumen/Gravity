@@ -1,20 +1,22 @@
 'use strict';
 
 angular.module('gravity')
-  .controller('IntroCtrl', function ($location) {
+  .controller('IntroCtrl', function ($timeout, $location) {
 
     var vm = this;
 
+    var content = $('.content');
     angular.extend(vm, {
-      name: 'IntroCtrl',
-      div1:true,
-      div2:true,
-      div3:true,
-      dev3action:function() {
-        vm.div3 = !vm.div3;
-        if (!vm.div1 && !vm.div2 && !vm.div3) {
-          $location.path("/");
-        }
+      swipeLeft: function () {
+        TweenMax.to(content, 1, {x: "+=768px"})
+      },
+      swipeRight: function () {
+        TweenMax.to(content, 1, {x: "-=768px"})
+      },
+      showHome: function () {
+        $timeout(function () {
+          $location.path('/');
+        }, 1000);
       }
     });
 

@@ -8,6 +8,12 @@ angular.module('gravity')
 
     TweenLite.defaultEase = Power0.easeNone;
 
+    var content = $('.wrapper');
+    var o = new TimelineMax();
+    o
+      .set(content, {opacity: 0})
+      .to(content, 1, {opacity: 1, delay: .5});
+
     var rocketContainer1 = $('#rocketContainer1');
     var rocket1 = rocketContainer1.children('.rocket-layer');
     var rocketContainer2 = $('#rocketContainer2');

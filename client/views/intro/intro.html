@@ -1,11 +1,11 @@
-<div class="content">
-  <div class="all-full div1 intro" ng-show="vm.div1" ng-swipe-left="vm.div1 = false" ng-swipe-right="vm.div1 = true" ng-click="vm.div1 = !vm.div1">
-    Coucou
+<div class="content" ng-swipe-left="vm.swipeRight()" ng-swipe-right="vm.swipeLeft()" ng-click="vm.swipeRight()">
+  <div class="all-full div1 intro">
+    1
   </div>
-  <div class="all-full div2 intro" ng-show="vm.div2" ng-swipe-left="vm.div2 = false" ng-swipe-right="vm.div2 = true" ng-click="vm.div2 = !vm.div2">
-    les ....
+  <div class="all-full div2 intro">
+    2
   </div>
-  <div class="all-full div3 intro" ng-show="vm.div3" ng-swipe-left="vm.div3 = false" ng-swipe-right="vm.div3 = true" ng-click="vm.dev3action()">
-    Loulous
+  <div class="all-full div3 intro" ng-click="vm.showHome()">
+    3
   </div>
 </div>

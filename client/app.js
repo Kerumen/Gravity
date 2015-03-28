@@ -3,7 +3,8 @@
 angular.module('gravity', [
   'ngRoute',
   'ngAnimate',
-  'chart.js'
+  'chart.js',
+  'ngTouch'
 ])
   .config(function ($routeProvider, $locationProvider) {
 
