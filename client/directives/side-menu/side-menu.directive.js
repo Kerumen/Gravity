@@ -30,6 +30,10 @@ angular.module('gravity')
           scope.$apply();
         });
 
+        scope.close = function () {
+          scope.navUi.isOpen = false;
+        };
+
       }
     };
   });
