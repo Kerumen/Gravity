@@ -25,3 +25,11 @@
   background-color: $light-green;
   box-shadow: 0 2px 0 1px $dark-green, rgba(0, 0, 0, .3) 0 4px 5px;
 }
+
+
+.btn-info {
+  @extend .btn;
+  color: $white;
+  background-color: $light-cyan;
+  box-shadow: 0 2px 0 1px darken($cyan, 8), rgba(0, 0, 0, .3) 0 4px 5px;
+}

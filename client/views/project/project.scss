@@ -3,16 +3,20 @@
  */
 
 .project {
-  margin-top: 6em;
+  padding-top: 6em;
+  background-color: $white;
+  color: $blue;
+  margin-bottom: 0;
   h1 {
     font-weight: bolder;
     font-size: 4em;
     text-align: center;
+    color: $blue;
   }
   h3 {
     text-transform: uppercase;
     font-weight: bolder;
-    text-align: center;color: $light-red;
+    text-align: center;color: $red;
     margin-bottom: 2em;
   }
   img {
@@ -37,11 +41,14 @@
   display: flex;
   justify-content: space-between;
   img {
-    bordeR: 4px solid $white;
-    box-shadow: $dark-white 0 2px 0 0;
+    bordeR: 4px solid $dark-white;
   }
   text-align: center;
   margin-bottom: 3em;
+}
+
+.card-no-white {
+  padding: 1em;
 }
 
 .infos-event {
@@ -70,5 +77,6 @@
 
 .but {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 3em;
 }
