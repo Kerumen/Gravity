@@ -16,25 +16,15 @@ angular.module('gravity')
       },
       topics : [
         {
-          "question" : "erhfk uefyguyerfg uyrfgryufr? ",
+          "question" : "Hello Maria, I'm workin for another big international company as demand planner. I was wondering, how easy it was for you to move from demand planner to production planner job in Danone, and what kind of challenges you faced? ",
           "author" : "Pierr M.",
           "date" : "02-03-15",
           "answer" :[
             {
-            "desc" : "erhfk uefyerg ergoijrg oi rgohergo uhgouehgoerhouerhg ou gouh eriugh rughrug rhugh roguheou rhgoueh gurhgu rgrgrg rg rg rg rg rg rgguyerfg uyrfgryufr ",
+            "desc" : "Hello Pierr, thank you for your message, It's been a heavy challenge for me in fact, due to the fact I had to change not only my job but the place where I leaved from as well. Specially the fact that I had to take the lead on a team. ",
             "author" : "Maria P."
-            },
-            {
-            "desc" : "erhfk uefyerg ergoijrg oi rgohergugh roguheou rhgoueh gurhgu rgrgrg rg rg rg rg rg rgguyerfg uyrfgryufr ",
-            "author" : "Louis S."
             }
           ]
-        },
-        {
-          "question" : "erhfk uefygu fefef fefefef efefefe yerfg ue efhrgiuh iugheriguh righrug rgurgurguir gyrfgryufr? ",
-          "author" : "Anne C.",
-          "date" : "23-03-15",
-          "answer" :[]
         }
       ]
     });

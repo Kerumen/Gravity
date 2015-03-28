@@ -6,7 +6,7 @@ angular.module('gravity')
     var vm = this;
 
     vm.indexTagsTitle = 0;
-    vm.tagsTitle = ['Most used tags', 'Professional tags', 'Hobby tags'];
+    vm.tagsTitle = ['Recommended tags', 'Professional tags', 'Hobby tags'];
     vm.customTag = null;
 
     angular.extend(vm, {
@@ -19,18 +19,17 @@ angular.module('gravity')
         vm.myTags.splice(index, 1);
       },
       myTags : [
-        { name: "Marketing", type: "tag-blue"}
       ],
       tags : [
-        { name: "Evian", type: "tag-blue"},
-        { name: "IT", type: "tag-red"},
-        { name: "France", type: "tag-green"},
+        { name: "Production", type: "tag-blue"},
+        { name: "Supply", type: "tag-red"},
+        { name: "International", type: "tag-green"},
         { name: "Mobility", type: "tag-red"},
-        { name: "Sales", type: "tag-red"},
+        { name: "France", type: "tag-red"},
         { name: "Activia", type: "tag-blue"},
         { name: "Volvic", type: "tag-red"},
-        { name: "USA", type: "tag-green"},
-        { name: "Language", type: "tag-blue"},
+        { name: "Planning", type: "tag-green"},
+        { name: "Innovation", type: "tag-blue"},
         { name: "Travel", type: "tag-red"},
         { name: "Moto", type: "tag-green"},
         { name: "Salut", type: "tag-green"},

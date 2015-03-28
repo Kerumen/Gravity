@@ -8,7 +8,7 @@ angular.module('gravity')
       link: function (scope, element) {
 
         scope.indexTagsTitle = 0;
-        scope.tagsTitle = ['Most used tags', 'Professional tags', 'Hobby tags'];
+        scope.tagsTitle = ['Recommended tags', 'Professional tags', 'Inspirational tags'];
         scope.customTag = null;
 
         scope.addTag = function (tag) {
@@ -22,35 +22,33 @@ angular.module('gravity')
         };
 
         scope.myTags = [
-          {name: "Marketing", type: "tag-blue"}
         ];
 
         scope.tags = [
-          {name: "Evian", type: "tag-blue"},
-          {name: "IT", type: "tag-red"},
-          {name: "France", type: "tag-green"},
-          {name: "Mobility", type: "tag-red"},
-          {name: "Sales", type: "tag-red"},
-          {name: "Activia", type: "tag-blue"},
-          {name: "Volvic", type: "tag-red"},
-          {name: "USA", type: "tag-green"},
-          {name: "Language", type: "tag-blue"},
-          {name: "Travel", type: "tag-red"},
-          {name: "Moto", type: "tag-green"},
-          {name: "Salut", type: "tag-green"},
-          {name: "Salut1", type: "tag-red"},
-          {name: "Salut2", type: "tag-green"},
-          {name: "Salut3", type: "tag-green"},
-          {name: "Salut4", type: "tag-red"},
-          {name: "Salut5", type: "tag-blue"},
+          { name: "Production", type: "tag-blue"},
+          { name: "Supply", type: "tag-red"},
+          { name: "International", type: "tag-green"},
+          { name: "Mobility", type: "tag-red"},
+          { name: "Innovation", type: "tag-blue"},
+          {name: "Operation", type: "tag-green"},
+          {name: "RH", type: "tag-green"},
+          {name: "Marketing", type: "tag-red"},
+          {name: "ISIT", type: "tag-green"},
+          {name: "dd", type: "tag-green"},
+          {name: "Vision", type: "tag-red"},
+          {name: "Action", type: "tag-blue"},
+          { name: "TeamLeader", type: "tag-red"},
+          { name: "Activia", type: "tag-blue"},
+          { name: "French", type: "tag-red"},
+          { name: "Planning", type: "tag-green"},
           {name: "Salut6", type: "tag-blue"},
-          {name: "Salut7", type: "tag-green"},
-          {name: "Salut8", type: "tag-red"},
-          {name: "Salut9", type: "tag-blue"},
-          {name: "Salut10", type: "tag-green"},
+          {name: "Legal", type: "tag-green"},
+          {name: "Compliance", type: "tag-red"},
+          {name: "Sales", type: "tag-blue"},
+          {name: "Digital", type: "tag-green"},
           {name: "Salut11", type: "tag-green"},
-          {name: "Salut12", type: "tag-blue"},
-          {name: "Monocycle", type: "tag-red"}
+          {name: "TeamBuilding", type: "tag-blue"},
+          {name: "Management", type: "tag-red"}
         ];
 
         scope.scrollTagsLeft = function () {

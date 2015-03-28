@@ -11,19 +11,23 @@ angular.module('gravity')
       planets: [
         {
           name: "Take Off!",
-          desc: "Join gravity Project team and take part in \"Renducing Car ben faut part in Manif env\"",
+          desc: "Join Volvic team and co-create with them the new bottle design.",
           tags: [
-            { name: "CO2", type: "tag-green"},
-            { name: "RSE", type: "tag-green"},
-            { name: "Environment", type: "tag-blue"}
+            { name: "Innovation", type: "tag-green"},
+            { name: "Production", type: "tag-green"},
+            { name: "Purchasing", type: "tag-red"},
+            { name: "Marketing", type: "tag-blue"},
+            { name: "C02", type: "tag-red"},
           ]
         },{
           name: "Discover!",
-          desc: "Maria is production planer at Bonafont plant.",
+          desc: "Maria is production planer at Volvic plant, Clermont-Ferrand.",
           tags: [
-            { name: "Teamleader", type: "tag-red"},
+            { name: "TeamLeader", type: "tag-red"},
             { name: "Production", type: "tag-blue"},
-            { name: "Career", type: "tag-blue"}
+            { name: "Operation", type: "tag-blue"},
+            { name: "Vision", type: "tag-green"},
+            { name: "Innovation", type: "tag-blue"}
           ]
         },{
           name: "Discuss!",
