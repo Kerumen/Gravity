@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('gravity')
-  .controller('HomeCtrl', function ($timeout, $location) {
+  .controller('HomeCtrl', function ($timeout, $location, $rootScope) {
 
     var vm = this;
+
 
 
     TweenLite.defaultEase = Power0.easeNone;
@@ -117,6 +118,7 @@ angular.module('gravity')
     var button = $('#button-login');
     var or = $('.login-or');
     var linkedIn = $('#linkedin-login');
+    vm.user = "";
     vm.login = function () {
       TweenMax.to(danone, .5, {y: -700, ease: 'Power2.easeOut'});
       TweenMax.to(title, .5, {y: 500, ease: 'Power2.easeOut'});
@@ -125,8 +127,14 @@ angular.module('gravity')
       TweenMax.to(button, .5, {x: 600, ease: 'Power2.easeOut'});
       TweenMax.to(or, .5, {opacity: 0, ease: 'Power2.easeOut'});
       TweenMax.to(linkedIn, .5, {x: -600, ease: 'Power2.easeOut'});
+
       $timeout(function () {
-        $location.path('/profile');
+        if (vm.user == "greg@danone.com") {
+          $rootScope.rootUi.danoner = true;
+          $location.path('/profile-danone');
+        } else {
+          $location.path('/profile');
+        }
       }, 1000);
     }
 

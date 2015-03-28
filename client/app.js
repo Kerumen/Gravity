@@ -19,7 +19,8 @@ angular.module('gravity', [
   .run(function ($rootScope) {
 
     $rootScope.rootUi = {
-      navBar: false
+      navBar: false,
+      danoner: false
     };
 
     $rootScope.$on('$routeChangeSuccess', function (e, route) {

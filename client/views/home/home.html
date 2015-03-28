@@ -10,7 +10,7 @@
   </div>
   <div class="login-forms">
     <form ng-submit="vm.login()" autocomplete="off">
-      <input id="login" class="input" type="text" placeholder="Login"/>
+      <input ng-model="vm.user" id="login" class="input" type="text" placeholder="Login"/>
       <input id="mdp" class="input" type="password" placeholder="Password"/>
       <button id="button-login" class="btn-default">Enter</button>
       <span class="login-or">or</span>
