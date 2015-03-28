@@ -11,6 +11,7 @@
     }
     .button-wrapper {
       display: flex;
+      justify-content: center;
     }
     h4 {
       margin: 10px 0;
@@ -30,6 +31,12 @@
   display: flex;
 }
 
+.button-add-project {
+  button {
+    margin: 0 auto;
+  }
+}
+
 .new-project-pictures {
   width: 20%;
   padding: 0 15px
@@ -47,4 +54,23 @@
   font-size: 50px;
   border-radius: 3px;
   border: 2px solid $dark-white;
+}
+
+.project-to-join {
+  border-radius: 3px;
+  display: flex;
+  background-color: rgba(black, .1);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  h3 {
+    width: 90%;
+  }
+  button {
+  }
+}
+
+.take-off-button {
+//  width: 20px
 }

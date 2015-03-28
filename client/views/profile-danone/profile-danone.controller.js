@@ -10,6 +10,14 @@ angular.module('gravity')
     });
 
     vm.availabilities = [{
+      icon: 'briefcase',
+      title: 'A mission?',
+      periodicity: -1,
+      buttons: [{
+        label: 'Add',
+        selected: false
+      }]
+    }, {
       icon: 'coffee',
       title: 'A coffee?',
       periodicity: 3,
@@ -20,17 +28,6 @@ angular.module('gravity')
       }, {
         label: 'No',
         type: 'danger',
-        selected: false
-      }]
-    }, {
-      icon: 'briefcase',
-      title: 'A project?',
-      periodicity: 2,
-      buttons: [{
-        label: 'Add',
-        selected: false
-      }, {
-        label: 'Join',
         selected: false
       }]
     }, {
@@ -49,7 +46,7 @@ angular.module('gravity')
     }, {
       icon: 'chatbubbles',
       title: 'A chat?',
-      periodicity: 8,
+      periodicity: 1,
       buttons: [{
         label: 'Yes',
         type: 'success',
@@ -67,21 +64,38 @@ angular.module('gravity')
           btn.selected = !btn.selected;
         });
       } else if (!button.hasOwnProperty('type')) {
-        vm.addProject();
+        if (button.label == "Add") {
+          vm.addProject();
+        } else if (button.label == "Join") {
+          vm.joinProject();
+        }
       }
     };
 
     var content = $('#profile-view');
     var addProject = $('#add-project');
+    var joinProject = $('#join-project');
+
     var t = new TimelineMax({delay: .5});
 
     t
-      .set(addProject, {opacity: 0, y: -50})
+      .set(addProject, {opacity: 0, y: -50, display: 'none'})
+      .set(joinProject, {opacity: 0, y: -50, display: 'none'})
       .set(content, {opacity: 0, y: 50})
       .to(content, .5, {opacity: 1, y:0});
 
     vm.addProject = function () {
-      TweenMax.to(addProject, .5, {opacity: 1, y:0})
+      var t = new TimelineMax();
+      t
+        .to(joinProject, .5, {opacity: 0, y:-50, display: 'none'})
+        .to(addProject, .5, {opacity: 1, y:0, display: 'block'})
+    };
+
+    vm.joinProject = function () {
+      var t = new TimelineMax();
+      t
+        .to(addProject, .5, {opacity: 0, y:-50, display: 'none'})
+        .to(joinProject, .5, {opacity: 1, y:0, display: 'block'})
     }
 
   });

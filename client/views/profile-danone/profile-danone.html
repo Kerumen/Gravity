@@ -15,8 +15,10 @@
           <div class="button-wrapper">
             <button ng-click="vm.toggleAvailability(item, button)" ng-repeat="button in item.buttons" ng-class="button.selected ? 'btn-' + button.type : 'btn-default'">{{ button.label }}</button>
           </div>
-          <input class="input" type="text" placeholder="" ng-model="item.periodicity"/>
-          <span>/month</span>
+          <div ng-if="item.periodicity != -1">
+            <input class="input" type="text" placeholder="" ng-model="item.periodicity"/>
+            <span>/month</span>
+          </div>
         </div>
       </div>
     </div>
@@ -38,9 +40,33 @@
           <input type="text" class="input" placeholder="Add tags"/>
         </div>
       </div>
-      <div>
-        <button class="btn-success">Add</button>
+      <div class="button-add-project">
+        <button class="btn-success">Add!</button>
       </div>
+    </div>
+  </div>
+  <div class="all-full margin-bot-2" id="join-project">
+    <div class="card">
+      <h2>Join a project</h2>
+      <div class="project-to-join">
+        <h3>SUPER PROJECT</h3>
+        <button class="btn-success">Join!</button>
+      </div>
+      <div class="project-to-join">
+        <h3>SUPER PROJECT</h3>
+        <button class="btn-success">Join!</button>
+      </div>
+      <div class="project-to-join">
+        <h3>SUPER PROJECT</h3>
+        <button class="btn-success">Join!</button>
+      </div>
+    </div>
+  </div>
+  <div class="all-full">
+    <div class="card">
+      <span class="f-left">You prefer to match with Danoners proposals?</span>
+      <div class="btn-success f-right take-off-button" ng-click="vm.takeOff()"> Take me off! <i class="icon-rocket rocket-take-off"></i></div>
+      <div class="f-clear"></div>
     </div>
   </div>
 </div>
