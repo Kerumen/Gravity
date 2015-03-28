@@ -48,7 +48,7 @@ h1 {
   background-color: $light-blue;
   border: 0;
   outline: none;
-  width: 350px;
+  width: 100%;
   color: white;
   padding: 10px;
   margin-bottom: 10px;
@@ -67,6 +67,13 @@ h1 {
   border-radius: 3px;
   box-shadow: darken($white, 8) 0 3px 0 0 inset, darken($dark-blue, 8) 0 3px 0 0;
   padding: 1em;
+  .input {
+    background-color: rgba(black, .1);
+    color: $dark-blue;
+    &::-webkit-input-placeholder {
+      color: $blue;
+    }
+  }
   h2 {
     font-size: 28px;
     font-weight: 700;

@@ -12,6 +12,7 @@ angular.module('gravity')
     vm.availabilities = [{
       icon: 'coffee',
       title: 'A coffee?',
+      periodicity: 3,
       buttons: [{
         label: 'Yes',
         type: 'success',
@@ -24,6 +25,7 @@ angular.module('gravity')
     }, {
       icon: 'briefcase',
       title: 'A project?',
+      periodicity: 2,
       buttons: [{
         label: 'Add',
         selected: false
@@ -34,6 +36,7 @@ angular.module('gravity')
     }, {
       icon: 'fork',
       title: 'A lunch?',
+      periodicity: 1,
       buttons: [{
         label: 'Yes',
         type: 'success',
@@ -46,6 +49,7 @@ angular.module('gravity')
     }, {
       icon: 'chatbubbles',
       title: 'A chat?',
+      periodicity: 8,
       buttons: [{
         label: 'Yes',
         type: 'success',
@@ -62,14 +66,22 @@ angular.module('gravity')
         angular.forEach(item.buttons, function (btn) {
           btn.selected = !btn.selected;
         });
+      } else if (!button.hasOwnProperty('type')) {
+        vm.addProject();
       }
     };
 
     var content = $('#profile-view');
+    var addProject = $('#add-project');
     var t = new TimelineMax({delay: .5});
 
     t
+      .set(addProject, {opacity: 0, y: -50})
       .set(content, {opacity: 0, y: 50})
       .to(content, .5, {opacity: 1, y:0});
+
+    vm.addProject = function () {
+      TweenMax.to(addProject, .5, {opacity: 1, y:0})
+    }
 
   });

@@ -15,7 +15,31 @@
           <div class="button-wrapper">
             <button ng-click="vm.toggleAvailability(item, button)" ng-repeat="button in item.buttons" ng-class="button.selected ? 'btn-' + button.type : 'btn-default'">{{ button.label }}</button>
           </div>
+          <input class="input" type="text" placeholder="" ng-model="item.periodicity"/>
+          <span>/month</span>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="all-full margin-bot-2" id="add-project">
+    <div class="card">
+      <h2>Add a new project</h2>
+      <div class="new-project-wrapper">
+        <div class="new-project-pictures">
+          <div class="add-a-picture">
+            <i class="ion-ios-plus-empty"></i>
+          </div>
+          <input class="input" type="text" placeholder="Slots"/>
+        </div>
+        <div class="new-project-infos">
+          <input type="text" class="input" placeholder="Name"/>
+          <textarea class="input" placeholder="Description"></textarea>
+          <input type="text" class="input" placeholder="Date"/>
+          <input type="text" class="input" placeholder="Add tags"/>
+        </div>
+      </div>
+      <div>
+        <button class="btn-success">Add</button>
       </div>
     </div>
   </div>
