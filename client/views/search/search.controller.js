@@ -64,7 +64,7 @@ angular.module('gravity')
           t = new TimelineMax();
           t
             .set($mPlanet, {opacity: 0})
-            .to($bg, .5, {x: 5300, y: 3520, scale: 7})
+            .to($bg, .5, {x: 5300, y: 3480, scale: 7})
             .to($mPlanet, .5, {opacity: 1}, "-=.1");
           vm.currentDesc = vm.planets[1];
         } else if (angular.element($planet3).is(e.target)) {
