@@ -6,7 +6,6 @@ angular.module('gravity')
     var vm = this;
 
     angular.extend(vm, {
-      name: 'MissionsCtrl'
     });
 
   });

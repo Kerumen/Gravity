@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gravity')
-  .directive('sideMenu', function () {
+  .directive('sideMenu', function ($location) {
     return {
       restrict: 'E',
       templateUrl: 'directives/side-menu/side-menu.html',
@@ -16,6 +16,13 @@ angular.module('gravity')
           scope.navUi.isOpen = false;
           scope.$apply();
         });
+
+        scope.isBlue = function() {
+          if ($location.path() == "/project") {
+            return true;
+          }
+          return false;
+        };
 
 
         angular.element(window).resize(function () {
