@@ -55,4 +55,8 @@ angular.module('gravity')
         $scope.$apply();
     });
 
+    $('#p-planet-1').circleType({radius:184, dir: -1});
+    $('#p-planet-2').circleType({radius:164, dir: -1});
+    $('#p-planet-3').circleType({radius:184, dir: -1});
+
   });
