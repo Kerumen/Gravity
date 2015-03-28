@@ -13,8 +13,10 @@
 }
 
 .back-stars {
+  position: relative;
   background-image: url('../../../assets/images/background.svg');
-  height: 800px;
+  height: 2000px;
+  width: 2000px;
   padding: 0;
   margin: 0;
 }
@@ -22,7 +24,7 @@
 .p1 {
   -webkit-transform: translateX(200px) translateY(-100px);
   p {
-    -webkit-transform: translateX(-280px) translateY(-30px);
+    -webkit-transform: translateX(-896px) translateY(-30px);
   }
 }
 
@@ -30,14 +32,14 @@
 .p2 {
   -webkit-transform: translateY(50px) translateX(100px);
   p {
-    -webkit-transform: translateX(-280px) translateY(-20px);
+    -webkit-transform: translateX(-898px) translateY(-20px);
   }
 }
 
 .p3 {
     -webkit-transform: translateX(380px) translateY(70px);
   p {
-    -webkit-transform: translateX(-280px) translateY(-40px);
+    -webkit-transform: translateX(-898px) translateY(-40px);
   }
 }
 
@@ -51,7 +53,7 @@
   padding: 10px 10px 0;
   .planet-desc {
     width: 1100px;
-    height: 1100px;
+    height: 1020px;
     border-radius: 100%;
     background-color: $white;
     box-shadow: $dark-white -2px -4px 0 0;

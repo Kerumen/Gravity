@@ -92,13 +92,14 @@ angular.module('gravity')
 
       var t = new TimelineMax({delay: 1});
       t
-        .to(loadingRocket, 1, {x: -450, y: -200, ease: 'Power0.easeIn'})
+        .to(loadingRocket, 1, {x: -450, y: -200, ease: 'Power1.easeIn'})
         .to(loadingRocketImg, 0.5, {rotation: "-=30", ease: 'Power0.easeIn'}, "-=.5")
-        .to(loadingRocket, 4, {rotation: -1650, transformOrigin:"50% 50%", ease: 'Power0.easeOut'});
+        .to(loadingRocket, 4, {rotation: -1650, transformOrigin:"50% 50%", ease: 'Power0.easeOut'})
+        .to(loadingRocket, 1, {opacity: 0, ease: 'Power0.easeOut'}, "-=1");
 
         $timeout(function () {
           $location.path('/search');
-        }, 6500);
+        }, 7000);
 
     }
 
