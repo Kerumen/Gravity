@@ -8,61 +8,62 @@ angular.module('gravity')
     angular.extend(vm, {
       name: 'DashboardCtrl',
       showmodal: false,
+      showmodal2:false,
       show:function(){
         vm.showmodal = true
       },
+      show2:function(){
+        vm.showmodal2 = true
+      },
       externs: [
-        {name:'Galeano', fname:'Eduardo', up:2, job:'Manager', country:'Uruguay', selected:true},
-        {name:'Munro', fname:'alice', up:0, job:'supply-chain', country:'Canada', selected:true},
-        {name:'Luna', fname:'diego', up:3, job:'supply-chain', country:'Mexique', selected:true},
-        {name:'Quiroga', fname:'Horacio', up:0, job:'supply-chain', country:'Uruguay', selected:true},
-        {name:'Machado', fname:'antonio', up:1, job:'supply-chain', country:'Espagne', selected:true},
-        {name:'Yu', fname:'gao', up:2, job:'supply-chain', country:'China', selected:true},
-        {name:'', fname:'Maria', up:1, job:'supply-chain', country:'Bresil', selected:true},
-        {name:'Astier', fname:'lionel', up:1, job:'supply-chain', country:'France', selected:true},
-        {name:'Stirling', fname:'linsay', up:0, job:'supply-chain', country:'US', selected:true}
+        {name:'Galeano', fname:'Eduardo', up:2, job:'Digital Manager', country:'Uruguay', selected:true},
+        {name:'Munro', fname:'alice', up:0, job:'business dev', country:'Canada', selected:true},
+        {name:'Luna', fname:'diego', up:3, job:'business controller', country:'Mexico', selected:true},
+        {name:'Quiroga', fname:'Horacio', up:0, job:'Quality engineer', country:'Uruguay', selected:true},
+        {name:'Machado', fname:'antonio', up:1, job:'supply-chain', country:'Spain', selected:true},
+        {name:'Yu', fname:'gao', up:2, job:'brand manager', country:'China', selected:true},
+        {name:'herrera', fname:'Roberta', up:1, job:'supply-chain', country:'Brazil', selected:true},
+        {name:'Astier', fname:'lionel', up:1, job:'recruiter', country:'France', selected:true},
+        {name:'Stirling', fname:'linsay', up:0, job:'internal communication', country:'US', selected:true}
       ],
       interns: [
-        {name:'Perusse', fname:'françois', offer:14, job:'HRmanager', country:'Canada', selected:true},
-        {name:'jayet', fname:'chloe', offer:14, job:'HRmanager', country:'France', selected:true},
-        {name:'Semprun', fname:'jorge', offer:12, job:'HRmanager', country:'Espagne', selected:true},
-        {name:'Perelman', fname:'gregori', offer:11, job:'HRmanager', country:'Russie', selected:true},
-        {name:'Coulombe', fname:'guy', offer:10, job:'HRmanager', country:'Canada', selected:true},
-        {name:'Khil', fname:'edouard', offer:9, job:'trolololo', country:'Russie', selected:true},
-        {name:'Sanchez', fname:'Luis Leon', offer:1, job:'HRmanager', country:'Espagne', selected:true},
-        {name:'Onetti', fname:'Juan Carlos', offer:1, job:'HRmanager', country:'Uruguay', selected:true},
+        {name:'Perusse', fname:'françois', offer:14, job:'Product dev. manager', country:'Canada', selected:true},
+        {name:'Gas', fname:'christine', offer:14, job:'internal comm. director', country:'France', selected:true},
+        {name:'Perez', fname:'Maria', offer:8, job:'Production planner', country:'France', selected:true},
+        {name:'Yang', fname:'lucy', offer:12, job:'internal controller', country:'china', selected:true},
+        {name:'Perelman', fname:'gregori', offer:11, job:'HRmanager', country:'Russia', selected:true},
+        {name:'puvenadrjah', fname:'imasso', offer:10, job:'IT manager', country:'Malaysia', selected:true},
+        {name:'Khil', fname:'edouard', offer:9, job:'trolololo', country:'Russia', selected:true},
+        {name:'Sanchez', fname:'Luis Leon', offer:1, job:'HRmanager', country:'Spain', selected:true},
+        {name:'Onetti', fname:'Juan Carlos', offer:1, job:'Quality engineer', country:'Uruguay', selected:true},
         {name:'Paseyro', fname:'Ricardo', offer:4, job:'HRmanager', country:'Uruguay', selected:true},
 
       ],
       topprojects: [
-        {name:'project1', nb:56},
-        {name:'project2', nb:26},
-        {name:'project3', nb:15},
-        {name:'project4', nb:59},
-        {name:'project5', nb:78},
-        {name:'project6', nb:81},
-        {name:'project7', nb:23},
-        {name:'project8', nb:12},
-        {name:'project9', nb:1},
-        {name:'project10', nb:32}
+        {name:'Brand the new activia packaging in Japan', country:'japan', sponsor:'Ken Watanabe'},
+        {name:'What do you expect from your manager ?', country:'US', sponsor:'John Blake'},
+        {name:'Waste management improvement', country:'Uruguay', sponsor:'Juan Carlos Onetti'},
+        {name:'Better collaboration with 2.0 tools', country:'France', sponsor:'Thierry lefebvre'},
+        {name:'New employer branding communication', country:'indonesia', sponsor:'Soraya poerbaningrat'}
       ],
       projects: [
-        {name:'project3', description:"description project3", job:"commercial", date:"06/03/15"},
-        {name:'project1', description:"description project1", job:"commercial", date:"18/02/15"},
-        {name:'project2', description:"description project2", job:"commercial", date:"26/01/15"}
+        {name:'Maria\'s career path', type:'Discover :', job:"operation", date:"06/03/15"},
+        {name:'Waste management improvement', type:'Take off :', job:"IT/Digital", date:"17/08/14"}
+      ],
+      projects2: [
+        {name:'General manager Bledina plant', type:'Discuss :', job:"General management", date:"09/03/15"},
+        {name:'Better collaboration with 2.0 tools', type:'Take off :', job:"CSR", date:"18/02/15"}
       ],
       recoms: [
-        {name:'danoners1', comment:"comment1", job:"commercial", date:"06/03/15"},
-        {name:'danoners2', comment:"comment2", job:"commercial", date:"18/02/15"},
-        {name:'danoners3', comment:"comment2", job:"commercial", date:"26/01/15"}
+        {name:'Maria P.', comment:"insightful comments and ideas on production in Brazil.", job:"operation", date:"06/03/15"}
       ]
     });
 
     vm.labels = ["offers", "demands"];
     vm.data = [11, 19];
-    vm.labels2 =["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"];
+    vm.labels2 =["Mobility", "Activia", "International", "innovation", "operation", "Brazil", "CSR"];
 
     vm.data2 = [
-      [65, 59, 90, 81, 56, 55, 40]
+      [82, 61, 90, 68, 45, 70, 32]
     ];
   });

@@ -7,29 +7,27 @@
         </div>
         <div class="margin-left">
           <h2>Roberta P.</h2>
-          <p>Commerciale <i class="ion-network margin-left"></i></p>
-          <p>Français, English<i class="ion-earth margin-left"></i></p>
+          <p>Production planner <i class="ion-network margin-left"></i></p>
+          <p>Portuguese, English and french<i class="ion-earth margin-left"></i></p>
         </div>
       </div>
       <div class="desktop-6 dash_marg_bot">
         <div class="desktop-12 text-center">
           <i class="icon ion-ios-star dash_icone"></i>
         </div>
-        <div class=" desktop-12 dash_stitle">Projects realised</div>
+        <div class=" desktop-12 dash_stitle">Participation</div>
           <div class="desktop-11">
             <ul class="desktop-12">
               <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="project in vm.projects | orderBy:order | limitTo : 8">
                 <div class="desktop-12">
-                  <span class="project_name dash_bold">{{project.name}}</span>
-                </div>
-                <div class="desktop-12">
-                  <span class="project_des">{{project.description}}</span>
+                  <span class="project_name dash_bold">{{project.type}}</span>
+                  <span class="project_name">{{project.name}}</span>
                 </div>
                 <div class="desktop-12">
                   <span class="project_date">{{project.date}}</span>
                 </div>
                 <div class="desktop-12">
-                  <span class="project_job"><span class="dash_bold">Job concerned</span> : {{project.job}}</span>
+                  <span class="project_job"><span class="dash_bold">Function :</span> : {{project.job}}</span>
                 </div>
               </li>
             </ul>
@@ -70,15 +68,85 @@
     </div>
   </div>
 </modal>
-
+<modal yolo="vm.showmodal2">
+  <div class="pop_up">
+    <div class="row">
+      <div class="card profile-infos desktop-12 dash_marg_bot">
+        <div class="profile-pic">
+          <img src="https://randomuser.me/api/portraits/med/women/62.jpg">
+        </div>
+        <div class="margin-left">
+          <h2>Maria P.</h2>
+          <p>Production planner <i class="ion-network margin-left"></i></p>
+          <p>Portuguese, English and french<i class="ion-earth margin-left"></i></p>
+        </div>
+      </div>
+      <div class="desktop-6 dash_marg_bot">
+        <div class="desktop-12 text-center">
+          <i class="icon ion-ios-star dash_icone"></i>
+        </div>
+        <div class=" desktop-12 dash_stitle">Organisation</div>
+        <div class="desktop-11">
+          <ul class="desktop-12">
+            <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="project in vm.projects | orderBy:order | limitTo : 8">
+              <div class="desktop-12">
+                <span class="project_name dash_bold">{{project.type}}</span>
+                <span class="project_name">{{project.name}}</span>
+              </div>
+              <div class="desktop-12">
+                <span class="project_date">{{project.date}}</span>
+              </div>
+              <div class="desktop-12">
+                <span class="project_job"><span class="dash_bold">Function :</span> : {{project.job}}</span>
+              </div>
+            </li>
+          </ul>
+          <div class="desktop-12">
+            <div class="desktop-6 centered">
+              <button class="btn-default">linkedin profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desktop-6 dash_marg_bot">
+        <div class="desktop-12 text-center">
+          <i class="icon ion-ios-star dash_icone"></i>
+        </div>
+        <div class=" desktop-12 dash_stitle">Participation</div>
+        <div class="desktop-11">
+          <ul class="desktop-12">
+            <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="project in vm.projects2 | orderBy:order | limitTo : 8">
+              <div class="desktop-12">
+                <span class="project_name dash_bold">{{project.type}}</span>
+                <span class="project_name">{{project.name}}</span>
+              </div>
+              <div class="desktop-12">
+                <span class="project_date">{{project.date}}</span>
+              </div>
+              <div class="desktop-12">
+                <span class="project_job"><span class="dash_bold">Function :</span> : {{project.job}}</span>
+              </div>
+            </li>
+          </ul>
+          <div class="desktop-12">
+            <div class="desktop-6 centered">
+              <button class="btn-default">linkedin profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</modal>
 <div class="row">
   <div class="dash_title desktop-12">Gravity Dashboard</div>
   <div class="border_right desktop-3">
     <div class="dash_stitle desktop-12">Talents</div>
     <div class="dash_search desktop-12">
       <span class="name_filter desktop-3">filter: </span>
-      <form class="desktop-4">
-        <input type="text" name="search" ng-model="vm.externfilter" />
+      <form class="desktop-8">
+        <input class="input" type="text" name="search" ng-model="vm.externfilter" />
       </form>
     </div>
     <ul class="desktop-11">
@@ -108,12 +176,12 @@
     <div class="dash_stitle desktop-12">Danoners</div>
     <div class="dash_search desktop-12">
       <span class="name_filter desktop-3">filter: </span>
-      <form class="desktop-4">
-        <input type="text" name="search" ng-model="vm.internfilter" />
+      <form class="desktop-8">
+        <input class="input" type="text" name="search" ng-model="vm.internfilter" />
       </form>
     </div>
     <ul class="desktop-11">
-      <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="intern in vm.interns | orderBy:order | limitTo : 8 | filter:vm.internfilter">
+      <li class="extern_list dash_card dash_marg_bot desktop-12" ng-repeat="intern in vm.interns | orderBy:order | limitTo : 8 | filter:vm.internfilter" ng-click="vm.show2()">
         <div class="desktop-8">
           <div class="desktop-12">
             <span class="extern_fname">{{intern.fname}}</span>
@@ -136,7 +204,7 @@
     </div>
   </div>
   <div class="desktop-6">
-    <div class="dash_stitle desktop-12">Stat projets</div>
+    <div class="dash_stitle desktop-12">Projects Statistics</div>
     <div class="desktop-12">
       <div class="card desktop-6">
         <div class="stat_title desktop-12 centered">demands/offers</div>
@@ -153,10 +221,17 @@
     </div>
     <div class="stat_title desktop-12 dash_marg_top">top projects</div>
     <ul class="desktop-11">
-      <li class="extern_list top_card top_marg_bot desktop-12" ng-repeat="topproject in vm.topprojects | orderBy:'-nb' | limitTo : 9">
+      <li class="extern_list top_card top_marg_bot desktop-12" ng-repeat="topproject in vm.topprojects | limitTo : 9">
         <div class="desktop-12">
-          <span class="extern_fname">Project name : {{topproject.name}}</span>
-          <span class="extern_name">realised {{topproject.nb}} times</span>
+          <span class="extern_fname desktop-12">{{topproject.name}}</span>
+          <div class="desktop-12">
+            <div class="desktop-6">
+              <span>Sponsor : {{topproject.sponsor}}</span>
+            </div>
+            <div class="desktop-6">
+              <span>{{topproject.country}}</span>
+            </div>
+          </div>
         </div>
       </li>
     </ul>
