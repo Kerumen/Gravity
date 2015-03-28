@@ -1,0 +1,27 @@
+<div class="card tag-card">
+  <h2>What are you interested in ?</h2>
+  <p>Fill your tags!</p>
+  <ul class="tag-container">
+    <li ng-repeat="tag in myTags track by tag.name" class="push-item">
+      <div ng-click="removeTag($index)" class="tag {{tag.type}}">{{tag.name}} <i class="ion-close"></i></div>
+    </li>
+    <li class="tag-custom">
+      <form ng-submit="addTag()">
+        <input type="text" ng-model="customTag" placeholder="Add a custom tag"/>
+      </form>
+    </li>
+  </ul>
+  <hr>
+  <p>{{ tagsTitle[indexTagsTitle] }}</p>
+  <div class="tag-wrapper">
+    <div class="tag-arrows" ng-click="scrollTagsLeft()"><i class="ion-chevron-left"></i></div>
+    <div class="tag-pool-wrapper">
+      <ul class="tag-pool">
+        <li ng-repeat="tag in tags track by tag.name">
+          <div ng-click="addTag(tag)" class="tag {{tag.type}}">{{tag.name}}</div>
+        </li>
+      </ul>
+    </div>
+    <div class="tag-arrows" ng-click="scrollTagsRight()"><i class="ion-chevron-right"></i></div>
+  </div>
+</div>

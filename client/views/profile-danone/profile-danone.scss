@@ -1,0 +1,22 @@
+.availabilities-wrapper {
+  display: flex;
+  justify-content: space-around;
+  .availability-item {
+    background-color: rgba(black, .1);
+    padding: 20px;
+    width: 24%;
+    text-align: center;
+    i {
+      font-size: 80px;
+    }
+    .button-wrapper {
+      display: flex;
+    }
+    h4 {
+      margin: 10px 0;
+    }
+    button {
+      padding: 5px 10px;
+    }
+  }
+}

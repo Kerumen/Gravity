@@ -1,0 +1,22 @@
+<div class="row" id="profile-view">
+  <div class="all-full margin-bot-2">
+    <profile-card></profile-card>
+  </div>
+  <div class="all-full  margin-bot-2">
+    <profile-tags></profile-tags>
+  </div>
+  <div class="all-full  margin-bot-2">
+    <div class="card">
+      <h2>Will you be available for..</h2>
+      <div class="availabilities-wrapper">
+        <div ng-repeat="item in vm.availabilities" class="availability-item">
+          <i class="ion-{{ item.icon }}"></i>
+          <h4>{{ item.title }}</h4>
+          <div class="button-wrapper">
+            <button ng-click="vm.toggleAvailability(item, button)" ng-repeat="button in item.buttons" ng-class="button.selected ? 'btn-' + button.type : 'btn-default'">{{ button.label }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

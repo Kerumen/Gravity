@@ -57,24 +57,6 @@ angular.module('gravity')
       .set(content, {opacity: 0, y: 50})
       .to(content, .5, {opacity: 1, y:0});
 
-    vm.scrollTagsLeft = function () {
-      vm.indexTagsTitle--;
-      var content = $('.tag-pool');
-      var t = new TimelineMax();
-
-      t
-        .to(content, .5, {x: "+=690"});
-    };
-
-    vm.scrollTagsRight = function () {
-      vm.indexTagsTitle++;
-      var content = $('.tag-pool');
-      var t = new TimelineMax();
-
-      t
-        .to(content, .5, {x: "-=690"});
-    };
-
     vm.takeOff = function () {
       var profileCard = $('.profile-infos');
       var tagCard = $('.tag-card');
@@ -82,7 +64,6 @@ angular.module('gravity')
       var rocket = $('.rocket-take-off');
       var takeOffButton = $('.take-off-button');
       var loadingRocket = $('.loading-rocket');
-      var loadingRocketImg = $('.loading-rocket img');
 
       TweenMax.to(profileCard, .5, {x: -800, ease: 'Power2.easeOut'});
       TweenMax.to(tagCard, .5, {x: 800, ease: 'Power2.easeOut'});
