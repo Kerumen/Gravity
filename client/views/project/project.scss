@@ -1,0 +1,74 @@
+/**
+ * project.scss
+ */
+
+.project {
+  margin-top: 6em;
+  h1 {
+    font-weight: bolder;
+    font-size: 4em;
+    text-align: center;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;color: $light-red;
+    margin-bottom: 2em;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  h2 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+  h4 {
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+  }
+}
+
+.participations {
+  display: flex;
+  justify-content: space-between;
+  img {
+    bordeR: 4px solid $white;
+    box-shadow: $dark-white 0 2px 0 0;
+  }
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.infos-event {
+  display: flex;
+  align-items: center;
+  padding: 1em 0 0 0;
+  i.ion-ios-people {
+    margin-right: 28px;
+    font-size: 9em;
+    color: $blue;
+    background-color: rgba($light-blue, .2);
+    border-radius: 3px;
+    padding: 0 14px 0 14px;
+  }
+  p {
+    color: $blue;
+    display: flex;
+    align-items: center;
+    margin-bottom: .8em;
+  }
+  i {
+    margin-right: 1em;
+    font-size: 32px;
+  }
+}
+
+.but {
+  display: flex;
+  justify-content: space-between;
+}
