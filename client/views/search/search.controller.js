@@ -12,6 +12,7 @@ angular.module('gravity')
         {
           name: "Take Off!",
           desc: "Join Volvic team and co-create with them the new bottle design.",
+          link: '/project',
           tags: [
             { name: "Innovation", type: "tag-green"},
             { name: "Production", type: "tag-green"},
@@ -22,6 +23,7 @@ angular.module('gravity')
         },{
           name: "Discover!",
           desc: "Maria is production planer at Volvic plant, Clermont-Ferrand.",
+          link: '/discover',
           tags: [
             { name: "TeamLeader", type: "tag-red"},
             { name: "Production", type: "tag-blue"},
@@ -32,6 +34,7 @@ angular.module('gravity')
         },{
           name: "Discuss!",
           desc: "With Greg - Danoner's",
+          link: '/discuss',
           tags: [
             { name: "Production", type: "tag-green"},
             { name: "Mobility", type: "tag-red"}
@@ -97,11 +100,11 @@ angular.module('gravity')
     $('#p-planet-2').circleType({radius:164, dir: -1});
     $('#p-planet-3').circleType({radius:184, dir: -1});
 
-    vm.seeMore = function () {
+    vm.seeMore = function (link) {
       TweenMax.to($mPlanet, 0.5, {x: -1000});
 
       $timeout(function () {
-        $location.path('/project');
+        $location.path(link);
       }, 500);
 
     };

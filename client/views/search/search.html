@@ -28,7 +28,7 @@
       <h1>{{ vm.currentDesc.name }}</h1>
       <div class="mission-flex">
         <p class="margin-bot">{{ vm.currentDesc.desc }}</p>
-        <i class="ion-ios-arrow-right" ng-click="vm.seeMore()"></i>
+        <i class="ion-ios-arrow-right" ng-click="vm.seeMore(vm.currentDesc.link)"></i>
       </div>
       <ul class="tags">
         <li ng-repeat="tag in vm.currentDesc.tags"><div class="tag {{ tag.type }}">{{ tag.name }}</div></li>

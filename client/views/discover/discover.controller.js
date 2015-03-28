@@ -29,4 +29,10 @@ angular.module('gravity')
       ]
     });
 
+    var content = $('.project-inner');
+    var t = new TimelineMax();
+    t
+      .set(content, {opacity: 0, y: 50})
+      .to(content, .5, {opacity: 1, y:0});
+
   });
