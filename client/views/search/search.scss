@@ -19,16 +19,26 @@
   margin: 0;
 }
 
-#planet-1 {
+.p1 {
   -webkit-transform: translateX(200px) translateY(-100px);
+  p {
+    -webkit-transform: translateX(-280px) translateY(-30px);
+  }
 }
 
-#planet-2 {
-  -webkit-transform: translateY(300px);
+
+.p2 {
+  -webkit-transform: translateY(50px) translateX(100px);
+  p {
+    -webkit-transform: translateX(-280px) translateY(-20px);
+  }
 }
 
-#planet-3 {
-  -webkit-transform: translateX(50px) translateY(570px);
+.p3 {
+    -webkit-transform: translateX(380px) translateY(70px);
+  p {
+    -webkit-transform: translateX(-280px) translateY(-40px);
+  }
 }
 
 .modal-round {
