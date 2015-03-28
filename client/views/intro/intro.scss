@@ -10,16 +10,20 @@
   justify-content: center;
   height: 1025px;
   width: 100%;
+  h1 {
+    font-size: 3em;
+  }
 }
 
 .div1 {
-  background-color: red;
+  background-color: $green;
+  text-align: center;
 }
 
 .div2 {
-  background-color: blue;
+  background-color: $cyan;
 }
 
 .div3 {
-  background-color: green;
+  background-color: $blue;
 }
