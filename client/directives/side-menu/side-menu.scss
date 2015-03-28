@@ -87,6 +87,9 @@ $marge: 12;
     transform: translateY(-200%);
     transition-delay: 0ms;
   }
+  &.btn-blue {
+    color: $blue;
+  }
 }
 
 .profile-pic {
