@@ -4,11 +4,14 @@
 
 <nav ng-show="navUi.isOpen" class="side-nav">
   <div class="profile-pic">
-    <img src="../../assets/images/profile.jpg">
+    <img ng-if="!isDanoner()" src="../../assets/images/profile.jpg">
+    <img ng-if="isDanoner()" src="../../assets/images/1.jpg">
   </div>
   <ul>
     <li active-when="/"><a ng-click="close()" href="/"><i class="ion-home"></i><span>Home</span></a></li>
-    <li active-when="/profile"><a ng-click="close()" href="/profile"><i class="ion-person"></i><span>Profile</span></a></li>
-    <li active-when="/missions"><a ng-click="close()" href="/missions"><i class="ion-planet"></i><span>Missions</span></a></li>
+    <li ng-if="!isDanoner()" active-when="/profile"><a ng-click="close()" href="/profile"><i class="ion-person"></i><span>Profile</span></a></li>
+    <li ng-if="isDanoner()" active-when="/profile-danone"><a ng-click="close()" href="/profile-danone"><i class="ion-person"></i><span>Profile</span></a></li>
+    <li ng-if="!isDanoner()" active-when="/missions"><a ng-click="close()" href="/missions"><i class="ion-planet"></i><span>Missions</span></a></li>
+    <li ng-if="isDanoner()" active-when="/missions-danone"><a ng-click="close()" href="/missions-danone"><i class="ion-planet"></i><span>Missions</span></a></li>
   </ul>
 </nav>

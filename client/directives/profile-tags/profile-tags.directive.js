@@ -24,6 +24,17 @@ angular.module('gravity')
         scope.myTags = [
         ];
 
+        if (scope.$root.rootUi.danoner) {
+          scope.myTags.push(
+            { name: "Marketing", type: "tag-blue"},
+            { name: "Volvic", type: "tag-blue"},
+            { name: "Sales", type: "tag-green"},
+            { name: "Packaging", type: "tag-red"},
+            { name: "Treck", type: "tag-green"},
+            { name: "Guitare", type: "tag-red"}
+          );
+        }
+
         scope.tags = [
           { name: "Production", type: "tag-blue"},
           { name: "Supply", type: "tag-red"},

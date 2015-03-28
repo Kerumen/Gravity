@@ -24,6 +24,13 @@ angular.module('gravity')
           return false;
         };
 
+        scope.isDanoner = function() {
+          if (scope.$root.rootUi.danoner) {
+            return true;
+          }
+          return false;
+        };
+
 
         angular.element(window).resize(function () {
           scope.navUi.isOpen = angular.element(window).width() > 990;
