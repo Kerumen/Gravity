@@ -43,6 +43,22 @@
   }
 }
 
+#planet-4 {
+  -webkit-transform: translateX(100px) translateY(-600px) scale(.8);
+}
+
+#planet-5 {
+  -webkit-transform: translateX(400px) translateY(-900px) scale(.8);
+}
+
+#planet-6 {
+  -webkit-transform: translateX(800px) translateY(-1100px);
+}
+
+#planet-7 {
+  -webkit-transform: translateX(1100px) translateY(-1800px) scale(.5);
+}
+
 .modal-round {
   width: 800px;
   overflow: hidden;
