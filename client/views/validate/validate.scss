@@ -1,0 +1,58 @@
+.success {
+  background-color: $white;
+  color: $blue;
+  margin-bottom: 0;
+  height: 1050px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h1 {
+    font-weight: bolder;
+    font-size: 4em;
+    text-align: center;
+    color: $blue;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;color: $red;
+    margin-bottom: 2em;
+  }
+  img {
+    width: 25%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+  h2 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+  h4 {
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+  }
+  b {
+    font-weight: bold;
+  }
+}
+
+.recap-infos {
+  margin-bottom: 50px;
+}
+
+.more-infos {
+  button {
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+}
+
+.button-wrapper-validate {
+  display: flex;
+  justify-content: center;
+}
