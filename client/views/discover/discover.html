@@ -1,0 +1,40 @@
+
+  <div class="project">
+    <div class="project-inner">
+      <div class="profile-pic">
+        <img src="assets/images/52.jpg" alt=""/>
+      </div>
+      <h1>Maria P.</h1>
+      <h3>Maria is prodcution planer at Bonafont plant.</h3>
+      <img class="video" src="assets/images/video.jpg" alt=""/>
+      <h2>Ask your questions to Maria</h2>
+      <div class="chat">
+        <ul>
+          <li ng-repeat="t in vm.topics">
+            <div class="topics">
+              <p class="question">{{t.question}}</p>
+              <p class="date">{{t.date}}</p>
+              <p class="author">{{t.author}}</p>
+            </div>
+              <ul>
+                <li ng-repeat="a in t.answer">
+                  <div class="rep">
+                    <p class="desc">{{a.desc}}</p>
+                    <p class="author">{{a.author}}</p>
+                  </div>
+                </li>
+                <li class="f-clear"></li>
+              </ul>
+
+          </li>
+          <li>
+            <textarea ng-model="vm.question" placeholder="Ask your question...">
+            </textarea>
+            <button ng-click="vm.addPost()" class="btn-success">Post</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+{{vm.post}}

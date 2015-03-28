@@ -18,7 +18,7 @@ angular.module('gravity')
         });
 
         scope.isBlue = function() {
-          if ($location.path() == "/project") {
+          if ($location.path() == "/project" || $location.path() == "/discover") {
             return true;
           }
           return false;
